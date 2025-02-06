@@ -1,6 +1,6 @@
-Simple service
+# Simple service
 
-Testing :
+## Testing :
 
 ```bash
 grpcurl -plaintext -d '{"a": 3, "b": 4}' localhost:50051 calculator.Calculator/Add
