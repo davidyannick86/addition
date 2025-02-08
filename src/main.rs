@@ -11,7 +11,7 @@ use calculator::SumResponse;
 
 fn addition(a: i32, b: i32) -> String {
     let sum = a + b;
-    format!("{} + {} = {}", a, b, sum)
+    format!("{a} + {b} = {sum}")
 }
 
 #[derive(Default, Debug)]
@@ -44,7 +44,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         ))
         .build_v1()?;
 
-    println!("Microservice Calculator en écoute sur {}", addr);
+    println!("Microservice Calculator en écoute sur {addr}");
 
     Server::builder()
         .add_service(CalculatorServer::new(calculator_service))
